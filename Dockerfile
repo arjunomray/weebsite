@@ -10,4 +10,6 @@ FROM debian:bookworm-slim AS runner
 
 WORKDIR /app
 COPY --from=builder /app/target/release/weeb-site /app/weeb-site
+COPY --from=builder /app/src/static /app/src/static
+COPY --from=builder /app/blogs /app/blogs
 CMD ["/app/weeb-site"]
