@@ -3,14 +3,14 @@ use crate::models::project::Project;
 pub fn get_projects() -> Vec<Project> {
     vec![
         Project::new(
-            "Weeb Site".to_string(),
-            "https://github.com/arjun/weeb-site".to_string(),
-            "My personal portfolio and blog built with Rust, Axum, and Askama. Features markdown blog posts and a clean, minimal design.".to_string(),
+            "Rustime".to_string(),
+            "https://github.com/arjunomray/rustime".to_string(),
+            "This is a rust based cli pomodoro timer".to_string(),
         ),
         Project::new(
-            "Rusty Raytracer".to_string(),
-            "https://github.com/arjun/rusty-raytracer".to_string(),
-            "A ray tracer written in Rust following the 'Ray Tracing in One Weekend' book series. Supports spheres, materials, and defocus blur.".to_string(),
+            "Grab a Seat".to_string(),
+            "https://github.com/arjunomray/Mailer".to_string(),
+            "This is an automation script which sends a bunch of referral mails to companies".to_string(),
         ),
         Project::new(
             "Task Master".to_string(),
