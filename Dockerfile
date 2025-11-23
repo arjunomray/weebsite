@@ -9,5 +9,5 @@ RUN cargo build --release
 FROM debian:bookworm-slim AS runner
 
 WORKDIR /app
-COPY --from=builder /app/target/release/weebsite /app/weebsite
-CMD ["/app/weebsite"]
+COPY --from=builder /app/target/release/weeb-site /app/weeb-site
+CMD ["/app/weeb-site"]
