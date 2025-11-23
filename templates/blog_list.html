@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="blog-list-container">
+    <header class="blog-header">
+        <h1>Blog</h1>
+        <p>Thoughts, tutorials, and updates</p>
+    </header>
+
+    {% if posts.is_empty() %}
+    <div class="no-posts">
+        <p>No blog posts yet. Check back soon!</p>
+    </div>
+    {% else %}
+    <div class="posts-grid">
+        {% for post in posts %}
+        <article class="post-card">
+            <div class="post-meta">
+                <time datetime="{{ post.date }}">{{ post.date }}</time>
+            </div>
+            <h2 class="post-title">
+                <a href="/blogs/{{ post.slug }}">{{ post.title }}</a>
+            </h2>
+            {% if post.description.is_some() %}
+            <p class="post-description">{{ post.description.as_ref().unwrap() }}</p>
+            {% endif %}
+            <a href="/blogs/{{ post.slug }}" class="read-more">Read more →</a>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

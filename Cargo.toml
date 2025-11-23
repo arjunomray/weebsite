@@ -1,0 +1,19 @@
+[package]
+name = "weeb-site"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+askama ={ version="0.14.0"} 
+axum = "0.8.7"
+tokio = { version = "1.48.0", features = ["full"] }
+shuttle-runtime = "0.57.0"
+shuttle-axum = "0.57"
+serde = { version = "1.0.228", features = ["derive"] }
+tracing-subscriber = "0.3.20"
+tower-http = { version = "0.6.2", features = ["fs", "trace"] }
+tracing = "0.1.41"
+pulldown-cmark = "0.12.2"
+gray_matter = "0.2.8"
+chrono = { version = "0.4.39", features = ["serde"] }
+shuttle-static-folder = "0.28.0"
